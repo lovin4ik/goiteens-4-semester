@@ -1,0 +1,13 @@
+{
+	"name": "tailwindcss",
+	"version": "1.0.0",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "npx @tailwindcss/cli -i ./src/css/global.css -o ./src/css/output.css --watch"
+	},
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.6",
+		"tailwindcss": "^4.1.6"
+	}
+}

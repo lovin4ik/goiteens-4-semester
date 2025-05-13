@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #b297dd;
+	--color-secondary: #181a1c;
+}
+
+body {
+	@apply bg-secondary text-white;
+}
