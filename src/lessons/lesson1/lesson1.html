@@ -5,8 +5,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>lesson-1</title>
 		<link rel="stylesheet" href="../../css/output.css" />
+		<link rel="stylesheet" href="./lesson1.css" />
+
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		lesson-1
+		<ul class="gallery mx-auto mt-12 block" id="imageGalary"></ul>
+
+		<div class="lightbox" id="lightbox">
+			<div class="lightbox__overlay"></div>
+
+			<div class="lightbox__content"></div>
+
+			<div class="arrow-left absolute left-4 cursor-pointer">
+				<i
+					class="bx bx-chevron-left text-9xl text-white transition-colors duration-300 ease-in-out hover:text-primary"
+				></i>
+			</div>
+			<div class="arrow-right absolute right-4 cursor-pointer">
+				<i
+					class="bx bx-chevron-right text-9xl text-white transition-colors duration-300 ease-in-out hover:text-primary"
+				></i>
+			</div>
+			<button
+				type="button"
+				class="lightbox__button"
+				data-action="close-lightbox"
+			></button>
+		</div>
+		<script src="./lesson1.js" type="module" defer></script>
 	</body>
 </html>
