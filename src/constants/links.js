@@ -1,6 +1,6 @@
 class Links {
 	HOME = '/src/'
-	LESSONS = `${this.HOME}lessons/`
+	LESSONS = `lessons/`
 	LESSON = `${this.LESSONS}lesson`
 }
 
