@@ -1,17 +1,20 @@
 const sliderInput = document.querySelector('.slider__input')
 const sliderImage = document.querySelector('.slider__image')
+const sliderWrapper = document.querySelector('.slider__wrapper')
 
 sliderImage.src = `https://picsum.photos/400/300?random=${Math.random()}`
 
 const inputHandler = e => {
-	sliderImage.style.width = `${e.target.value * 4}px`
+	sliderWrapper.style.width = `${e.target.value * 4}px`
 }
 
-sliderImage.style.width = `${sliderInput.value * 4}px`
+sliderInput.value = sliderInput.defaultValue
+
+sliderWrapper.style.width = `${sliderInput.value * 4}px`
 
 const debouncedInputHandler = _.debounce(inputHandler, 300)
 
-sliderInput.addEventListener('input', debouncedInputHandler)
+sliderInput.addEventListener('input', inputHandler)
 
 const secondLessonContainer = document.querySelector('.secondLessonContainer')
 const followerDiv = document.querySelector('.followerDiv')
@@ -38,6 +41,6 @@ const moveFolower = e => {
 	followerDiv.style.left = `${x}px`
 }
 
-const debouncedMoveFolower = _.debounce(moveFolower, 10)
+const debouncedMoveFolower = _.debounce(moveFolower, 100)
 
 secondLessonContainer.addEventListener('mousemove', debouncedMoveFolower)
